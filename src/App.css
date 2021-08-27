@@ -1,0 +1,115 @@
+.songs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top:30px;
+  margin:0px 50px;
+}
+.navbar {
+  padding: 0px;
+}
+.card {
+  border:none;
+  height:400px;
+  width:200px;
+  margin:10px;
+}
+
+.card-text .card-title {
+  display: flex;
+  justify-content: center;
+}
+.song_image {
+  height:200px;
+  width:200px;
+  border-radius: 50%; 
+}
+.nav-end {
+  padding: 0px;
+}
+.song_image:hover {
+  filter: drop-shadow(8px 8px 10px gray);
+}
+
+.header {
+  color:#e30bad;
+}
+
+.form {
+  border: 1px solid blue;
+  
+  width:400px;
+  margin-left:50px;
+}
+
+.form > h3 {
+  color:darkblue;
+  text-align: center;
+}
+.error {
+  color:red;
+}
+label {
+  float:left;
+  margin:0px 20px;
+  color:blue;
+}
+.img_icon_wrap {
+  position: relative;
+}
+.fa {
+  font-size: 30px;
+}
+.fa-times-circle  {
+  position:absolute;
+  top:0;
+  right:0;
+  opacity: 0.6;
+}
+.checked {
+  position:absolute;
+  top:0;
+  right:0;
+  height:20px;
+  width:40px;
+}
+.fa-edit {
+  position:absolute;
+  bottom: 0;
+  left:0;
+}
+.fa-music {
+  position: absolute;
+  color:black;
+  bottom: 0;
+  right:0;
+}
+ 
+.fa-music:before{
+  content:"\f04b";
+  color:black;
+  opacity:0.6;
+}
+.song_container {
+  position: relative;
+}
+.dlt_btn {
+  position: absolute;
+  top:0;
+  right:0;
+  margin-right: 20px;
+  
+}
+.add_btn {
+  margin-left: 20px;
+}
+.video-player {
+  display: flex;
+  align-items: center;
+  padding-top:10px;
+}
+.song-title {
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

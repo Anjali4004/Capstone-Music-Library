@@ -1,0 +1,123 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "title": "Nazm Nazm",
+      "movie": " Bareilly ki Barfi",
+      "year": "2017",
+      "singer": "Parvo Mukherjee",
+      "web_url": "https://www.youtube.com/watch?v=RFx4g4GunYw",
+      "img_url": "https://n1.sdlcdn.com/imgs/h/b/k/Bareilly-Ki-Barfi-Blu-ray-SDL670225016-1-a007f.jpeg"
+    },
+    {
+      "id": 2,
+      "title": "Hum Aapke Hain Koun",
+      "movie": "Hum Aapke Hain Koun",
+      "year": "1994",
+      "singer": "SP Balasubrahmanyam",
+      "web_url": "http://www.songnotes.cc/songs/78-the-tallest-man-on-earth-1904",
+      "img_url": "https://i1.wp.com/bestoftheyear.in/wp-content/uploads/2018/01/Hum-Aapke-hain-koun-1.jpg?fit=1200%2C1600&ssl=1"
+    },
+    {
+      "id": 3,
+      "title": "Tujhe Dekha to",
+      "movie": "Dilwale Dulhaniya Le Jayenge",
+      "year": "1995",
+      "singer": "Kumar Sanu",
+      "web_url": "https://www.youtube.com/watch?v=cNV5hLSa9H8",
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Ek Ladki Ko Dekha",
+      "movie": "1942 A love story",
+      "singer": "Darshan Raval",
+      "year": "1994",
+      "web_url": "https://www.youtube.com/watch?v=CZ5a69wwg5k",
+      "img_url": "https://m.media-amazon.com/images/M/MV5BMjcxNTA4NDczNl5BMl5BanBnXkFtZTcwMDI2ODgzMQ@@._V1_.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Mere Khwabon Mein",
+      "movie": "Dilwale Dulhaniya Le Jayenge",
+      "year": "1995",
+      "singer": "Lata Mangeskar",
+      "web_url": "https://www.youtube.com/watch?v=Zxgvob1Ew0c",
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg"
+    },
+    {
+      "id": 6,
+      "title": "O mere Dil Ke Chain",
+      "movie": "Mere Jeevan Sathi",
+      "year": "1972",
+      "singer": "Kishore kumar",
+      "web_url": "https://www.youtube.com/watch?v=5eyflIV8pzMhttps://www.youtube.com/watch?v=Zxgvob1Ew0c",
+      "img_url": "https://images-na.ssl-images-amazon.com/images/I/A1ONzWhnvTL._RI_.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Maula mere Maula",
+      "movie": "Anwar",
+      "year": "2007",
+      "singer": "Roopkumar Rathod",
+      "web_url": "https://www.youtube.com/watch?v=boRd0WoCemI",
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/7/79/Anwar_2007_film_poster.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Mehandi Laga ke",
+      "movie": "Dilwale Dulhaniya Le Jayenge",
+      "year": "1995",
+      "singer": "Udit Narayan",
+      "web_url": "https://www.youtube.com/watch?v=-bNwqXvMuB8",
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Ek Ajnabee Haseena se",
+      "movie": "Ajnabee",
+      "singer": "Kishore kumar",
+      "year": "2001",
+      "web_url": "https://www.youtube.com/watch?v=Df_iLzhDoWs",
+      "img_url": "https://images-na.ssl-images-amazon.com/images/I/71tEwMyX4kL._RI_.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Kuch Na Kaho",
+      "movie": "1942 A love story",
+      "singer": "Kumar Sanu",
+      "year": "1994",
+      "web_url": "https://www.youtube.com/watch?v=LLcpGkuQ32o",
+      "img_url": "https://m.media-amazon.com/images/M/MV5BMjcxNTA4NDczNl5BMl5BanBnXkFtZTcwMDI2ODgzMQ@@._V1_.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "anjali@gmail.com",
+      "firstName": "Anjali",
+      "lastName": "Kumari",
+      "password": "Anjali123",
+      "location": "Bangalore",
+      "mobile": "+919223456787"
+    },
+    {
+      "id": 2,
+      "email": "priya@gmail.com",
+      "firstName": "Priya",
+      "lastName": "Kumari",
+      "password": "Priya123",
+      "location": "Pune",
+      "mobile": "+919223456766"
+    },
+    {
+      "email": "raj@gmail.com",
+      "firstName": "Raj",
+      "lastName": "Kumar",
+      "password": "Raj@123",
+      "location": "Hyderabad",
+      "mobile": 9667545672,
+      "id": 3
+    }
+  ]
+}
