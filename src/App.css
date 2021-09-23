@@ -37,14 +37,29 @@
 
 .form {
   border: 1px solid blue;
-  
+  margin-top: 20px !important;
   width:400px;
-  margin-left:50px;
+  margin:auto;
 }
 
 .form > h3 {
   color:darkblue;
   text-align: center;
+}
+.songdetail {
+  border-radius: 5%;
+  border:1px solid blue;
+  margin:auto;
+  max-width:600px;
+  margin-top:20px !important;
+}
+.songdetail > h3 {
+  color:rgb(17, 133, 98);
+  text-align:center;
+}
+.songdetail > h3 >span {
+  color:rgb(48, 17, 133);
+  text-align:center;
 }
 .error {
   color:red;

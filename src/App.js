@@ -1,5 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useEffect, useState, Suspense, lazy } from "react";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
 import { useDispatch } from "react-redux";
 import NavBar from "./Components/Navbar";
 import About from "./Components/About";
@@ -8,13 +13,17 @@ import Player from "./Components/Player";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import AddSong from "./Components/AddSong";
+// import SongDetail from "./Components/SongDetail";
+
+import UpdateSong from "./Components/EditSong";
 import { loadUserAsync, loadSongsAsync } from "./reducers/songReducer";
 import "./App.css";
+const SongDetail = lazy(() => import("./Components/SongDetail"));
 
 export default function App() {
   const [user, setUser] = useState(null);
   const dispatch = useDispatch();
-
+  const login = localStorage.getItem("email");
   function setId(id) {
     setUser(id);
   }
@@ -39,7 +48,24 @@ export default function App() {
           <Route path="/About" component={About} />
           <Route path="/Login" component={Login} />
           <Route path="/Register" component={Register} />
-          <Route path="/AddSong" component={AddSong} />
+
+          {login ? (
+            <>
+              <Route path="/AddSong" component={AddSong} />
+
+              <Route path="/EditSong/id/:id" component={UpdateSong} />
+              <Route
+                path="/song/:id"
+                render={(props) => (
+                  <Suspense fallback={<h1>Loading...</h1>}>
+                    <SongDetail {...props} />
+                  </Suspense>
+                )}
+              />
+            </>
+          ) : (
+            <Redirect to="/Login" />
+          )}
         </Switch>
       </div>
     </Router>

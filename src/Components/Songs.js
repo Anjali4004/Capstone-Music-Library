@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { loadSongsAsync, deleteSongAsync } from "../reducers/songReducer";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function Songs(props) {
   const [toggle, setToggle] = useState(false);
   const [dltSong, setDltSong] = useState(false);
   const songs = useSelector((state) => state.songs);
-  const [stateCustomer, setCustomerState] = useState([]);
+  const [stateSong, setSongState] = useState([]);
   const dispatch = useDispatch();
-  // const history = useHistory();
+  const login = localStorage.getItem("email");
+  const history = useHistory();
   const id = Number(props.match?.params.id);
 
   const getSongs = () => {
-    setCustomerState(
+    setSongState(
       songs.map((d) => {
         return {
           select: false,
@@ -24,8 +25,8 @@ function Songs(props) {
     );
   };
 
-  const deleteCustomerByIds = () => {
-    stateCustomer.forEach((d) => {
+  const deleteSongByIds = () => {
+    stateSong.forEach((d) => {
       if (d.select) {
         dispatch(deleteSongAsync(d.id));
         dispatch(loadSongsAsync());
@@ -41,33 +42,37 @@ function Songs(props) {
 
   return (
     <div className="song_container">
-      {toggle ? (
-        <Button
-          className="dlt_btn"
-          variant="danger"
-          onClick={() => {
-            setToggle(!toggle);
-            setDltSong(!dltSong);
-            deleteCustomerByIds();
-          }}
-        >
-          Delete
+      {login ? (
+        toggle ? (
+          <Button
+            className="dlt_btn"
+            variant="danger"
+            onClick={() => {
+              setToggle(!toggle);
+              setDltSong(!dltSong);
+              deleteSongByIds();
+            }}
+          >
+            Delete
+          </Button>
+        ) : (
+          <Button
+            className="dlt_btn"
+            variant="danger"
+            onClick={() => {
+              setToggle(!toggle);
+              getSongs();
+            }}
+          >
+            Delete Multiple Songs
+          </Button>
+        )
+      ) : null}
+      {login ? (
+        <Button className="add_btn" variant="primary" href="/AddSong">
+          Add New Song
         </Button>
-      ) : (
-        <Button
-          className="dlt_btn"
-          variant="danger"
-          onClick={() => {
-            setToggle(!toggle);
-            getSongs();
-          }}
-        >
-          Delete Multiple Songs
-        </Button>
-      )}
-      <Button className="add_btn" variant="primary" href="/AddSong">
-        Add New Song
-      </Button>
+      ) : null}
 
       <div className="songs">
         {id ? props?.handleCallBack(id) : null}
@@ -94,8 +99,8 @@ function Songs(props) {
                     // checked={checkedState[index]}
                     onChange={(e) => {
                       let value = e.target.checked;
-                      setCustomerState(
-                        stateCustomer.map((d) => {
+                      setSongState(
+                        stateSong.map((d) => {
                           if (d.id === song.id) d.select = value;
                           return d;
                         })
@@ -104,7 +109,13 @@ function Songs(props) {
                   />
                 </div>
               ) : (
-                <Card.Link href="#" onClick={() => deleteSong(song.id)}>
+                <Card.Link
+                  href="#"
+                  onClick={() => {
+                    window.confirm("Are you sure you want to Delete ? ") &&
+                      deleteSong(song.id);
+                  }}
+                >
                   <i
                     className="fa fa-times-circle"
                     style={{ color: "red" }}
@@ -113,7 +124,9 @@ function Songs(props) {
                   ></i>
                 </Card.Link>
               )}
-              <Card.Link href="#">
+              <Card.Link
+                onClick={() => history.push(`/EditSong/id/${song.id}`)}
+              >
                 <i
                   className="fa fa-edit"
                   style={{ color: "blue" }}
@@ -124,11 +137,16 @@ function Songs(props) {
             </div>
             <Card.Body>
               <Card.Title
+                role="button"
                 tabIndex="-1"
                 id={`title${song.id} `}
                 className="song-title"
+                style={{ cursor: "pointer", color: "blue" }}
+                onClick={() => {
+                  history.push(`/song/${song.id}`);
+                }}
               >
-                {song.title}
+                <u> {song.title}</u>
               </Card.Title>
               <Card.Text className="song-title">{song.movie}</Card.Text>
             </Card.Body>

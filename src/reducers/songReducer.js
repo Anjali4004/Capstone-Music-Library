@@ -17,12 +17,23 @@ export const addSongAsync = createAsyncThunk(
     }
   }
 );
+export const UpdateSongAsync = createAsyncThunk(
+  "songs/EditSong",
+  async (song, { rejectWithValue }) => {
+    console.log(song.id);
+    try {
+      const response = await songApi.putData(song, song.id);
+      return response.data;
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
 export const deleteSongAsync = createAsyncThunk(
   "songs/deletesong",
   async (itemId) => {
-    console.log(itemId);
     const response = await songApi.handleDelete(itemId);
-    console.log(response);
+
     return response;
   }
 );
@@ -68,6 +79,18 @@ export const songSlice = createSlice({
     },
     [addSongAsync.rejected]: (state, action) => {
       console.log("addSongAsync error...");
+      throw action.payload;
+    },
+    [UpdateSongAsync.pending]: (state) => {
+      console.log("EditSong pending...");
+      return state;
+    },
+    [UpdateSongAsync.fulfilled]: (state, action) => {
+      console.log("EditSong success...");
+      state.push(action.payload);
+    },
+    [UpdateSongAsync.rejected]: (state, action) => {
+      console.log("EditSong error...");
       throw action.payload;
     },
     [deleteSongAsync.pending]: (state) => {

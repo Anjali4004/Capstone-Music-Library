@@ -13,29 +13,41 @@ const AddSong = () => {
     initialValues: {
       movie: "",
       title: "",
-      length: "",
+      year: "",
       singer: "",
+      length: "",
+      web_url: "",
+      img_url: "",
     },
     validationSchema: Yup.object({
       movie: Yup.string().required("Movie Name is Required"),
       title: Yup.string().required("Title is Required"),
-      length: Yup.string().required("Song length is Required"),
-      singer: Yup.string().required("Singer Name is Required"),
+      year: Yup.string().required("Year is Required"),
+      singer: Yup.string().required("Singer is Required"),
+      length: Yup.string().required("length is Required"),
+      web_url: Yup.string().required("Youtube link is Required"),
+      img_url: Yup.string().required("Image URL is Required"),
     }),
     onSubmit: (values, actions) => {
       let Song = {
         movie: values.movie,
         title: values.title,
-        length: values.length,
+        year: values.year,
         singer: values.singer,
+        length: values.length,
+        web_url: values.web_url,
+        img_url: values.img_url,
       };
       dispatch(addSongAsync(Song));
       actions.resetForm({
         values: {
           movie: "",
           title: "",
+          year: "",
           length: "",
           singer: "",
+          web_url: "",
+          img_url: "",
         },
       });
     },
@@ -84,6 +96,33 @@ const AddSong = () => {
         <input id="singer" type="text" {...formik.getFieldProps("singer")} />
         {formik.touched.singer && formik.errors.singer ? (
           <div className="error">{formik.errors.singer}</div>
+        ) : (
+          <br />
+        )}
+
+        <br />
+        <label htmlFor="year">Year</label>
+        <input id="year" type="text" {...formik.getFieldProps("year")} />
+        {formik.touched.year && formik.errors.year ? (
+          <div className="error">{formik.errors.year}</div>
+        ) : (
+          <br />
+        )}
+
+        <br />
+        <label htmlFor="web_url">YouTube Link</label>
+        <input id="web_url" type="text" {...formik.getFieldProps("web_url")} />
+        {formik.touched.web_url && formik.errors.web_url ? (
+          <div className="error">{formik.errors.web_url}</div>
+        ) : (
+          <br />
+        )}
+
+        <br />
+        <label htmlFor="img_url">Image URL</label>
+        <input id="img_url" type="text" {...formik.getFieldProps("img_url")} />
+        {formik.touched.img_url && formik.errors.img_url ? (
+          <div className="error">{formik.errors.img_url}</div>
         ) : (
           <br />
         )}

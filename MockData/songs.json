@@ -2,37 +2,41 @@
   "songs": [
     {
       "id": 1,
-      "title": "Nazm Nazm",
       "movie": " Bareilly ki Barfi",
+      "title": "Nazm Nazm",
       "year": "2017",
       "singer": "Parvo Mukherjee",
+      "length": "3:00",
       "web_url": "https://www.youtube.com/watch?v=RFx4g4GunYw",
       "img_url": "https://n1.sdlcdn.com/imgs/h/b/k/Bareilly-Ki-Barfi-Blu-ray-SDL670225016-1-a007f.jpeg"
     },
     {
       "id": 2,
-      "title": "Hum Aapke Hain Koun",
       "movie": "Hum Aapke Hain Koun",
+      "title": "Hum Aapke Hain Koun",
       "year": "1994",
       "singer": "SP Balasubrahmanyam",
+      "length": "4:00",
       "web_url": "http://www.songnotes.cc/songs/78-the-tallest-man-on-earth-1904",
       "img_url": "https://i1.wp.com/bestoftheyear.in/wp-content/uploads/2018/01/Hum-Aapke-hain-koun-1.jpg?fit=1200%2C1600&ssl=1"
     },
     {
       "id": 3,
-      "title": "Tujhe Dekha to",
       "movie": "Dilwale Dulhaniya Le Jayenge",
+      "title": "Tujhe Dekha to",
       "year": "1995",
       "singer": "Kumar Sanu",
+      "length": "7:00",
       "web_url": "https://www.youtube.com/watch?v=cNV5hLSa9H8",
       "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg"
     },
     {
       "id": 4,
-      "title": "Ek Ladki Ko Dekha",
       "movie": "1942 A love story",
-      "singer": "Darshan Raval",
+      "title": "Ek Ladki Ko Dekha",
       "year": "1994",
+      "singer": "Darshan Raval",
+      "length": "5",
       "web_url": "https://www.youtube.com/watch?v=CZ5a69wwg5k",
       "img_url": "https://m.media-amazon.com/images/M/MV5BMjcxNTA4NDczNl5BMl5BanBnXkFtZTcwMDI2ODgzMQ@@._V1_.jpg"
     },

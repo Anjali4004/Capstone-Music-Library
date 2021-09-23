@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
 
-function Login() {
+function Login(props) {
   const users = useSelector((state) => state.users);
 
   const history = useHistory();
@@ -24,6 +24,7 @@ function Login() {
         password: values.password,
       };
       localStorage.setItem("email", x.email);
+
       users
         .filter(
           (user) => user.email === x.email && user.password === x.password
