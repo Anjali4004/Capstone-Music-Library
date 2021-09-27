@@ -1,18 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { loadSongsAsync, deleteSongAsync } from "../reducers/songReducer";
 import { useHistory } from "react-router-dom";
 
 function Songs(props) {
+  let filtered;
   const [toggle, setToggle] = useState(false);
-  const [dltSong, setDltSong] = useState(false);
+  const [songListDefault, setSongListDefault] = useState([]);
+  const [songList, setSongList] = useState([]);
   const songs = useSelector((state) => state.songs);
   const [stateSong, setSongState] = useState([]);
   const dispatch = useDispatch();
   const login = localStorage.getItem("email");
   const history = useHistory();
   const id = Number(props.match?.params.id);
+  useEffect(() => {
+    props.input === "" ? (
+      <>
+        {setSongListDefault(songs)}
+        {setSongList(songs)}
+      </>
+    ) : (
+      <>
+        {
+          (filtered = songListDefault.filter((song) => {
+            return (
+              song.title.toLowerCase().includes(props.input.toLowerCase()) ||
+              song.movie.toLowerCase().includes(props.input.toLowerCase())
+            );
+          }))
+        }
+
+        {setSongList(filtered)}
+      </>
+    );
+  }, [songs, props.input]);
 
   const getSongs = () => {
     setSongState(
@@ -42,6 +65,7 @@ function Songs(props) {
 
   return (
     <div className="song_container">
+      {console.log(songList)}
       {login ? (
         toggle ? (
           <Button
@@ -49,7 +73,6 @@ function Songs(props) {
             variant="danger"
             onClick={() => {
               setToggle(!toggle);
-              setDltSong(!dltSong);
               deleteSongByIds();
             }}
           >
@@ -76,7 +99,7 @@ function Songs(props) {
 
       <div className="songs">
         {id ? props?.handleCallBack(id) : null}
-        {songs?.map((song, index) => (
+        {songList?.map((song, index) => (
           <Card key={index}>
             <div className="img_icon_wrap">
               <Card.Img
@@ -91,39 +114,41 @@ function Songs(props) {
                   title="View Song"
                 ></i>
               </Card.Link>
-              {toggle ? (
-                <div>
-                  <input
-                    className="checked"
-                    type="checkbox"
-                    // checked={checkedState[index]}
-                    onChange={(e) => {
-                      let value = e.target.checked;
-                      setSongState(
-                        stateSong.map((d) => {
-                          if (d.id === song.id) d.select = value;
-                          return d;
-                        })
-                      );
+              {login ? (
+                toggle ? (
+                  <div>
+                    <input
+                      className="checked"
+                      type="checkbox"
+                      // checked={checkedState[index]}
+                      onChange={(e) => {
+                        let value = e.target.checked;
+                        setSongState(
+                          stateSong.map((d) => {
+                            if (d.id === song.id) d.select = value;
+                            return d;
+                          })
+                        );
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <Card.Link
+                    href="#"
+                    onClick={() => {
+                      window.confirm("Are you sure you want to Delete ? ") &&
+                        deleteSong(song.id);
                     }}
-                  />
-                </div>
-              ) : (
-                <Card.Link
-                  href="#"
-                  onClick={() => {
-                    window.confirm("Are you sure you want to Delete ? ") &&
-                      deleteSong(song.id);
-                  }}
-                >
-                  <i
-                    className="fa fa-times-circle"
-                    style={{ color: "red" }}
-                    data-toggle="tooltip"
-                    title="Delete Song"
-                  ></i>
-                </Card.Link>
-              )}
+                  >
+                    <i
+                      className="fa fa-times-circle"
+                      style={{ color: "red" }}
+                      data-toggle="tooltip"
+                      title="Delete Song"
+                    ></i>
+                  </Card.Link>
+                )
+              ) : null}
               <Card.Link
                 onClick={() => history.push(`/EditSong/id/${song.id}`)}
               >

@@ -93,6 +93,16 @@
       "year": "1994",
       "web_url": "https://www.youtube.com/watch?v=LLcpGkuQ32o",
       "img_url": "https://m.media-amazon.com/images/M/MV5BMjcxNTA4NDczNl5BMl5BanBnXkFtZTcwMDI2ODgzMQ@@._V1_.jpg"
+    },
+    {
+      "movie": "Rab Ne Bana Di Jodi",
+      "title": "Haule Haule",
+      "year": "2008",
+      "singer": "Udit Narayan",
+      "length": "4:15",
+      "web_url": "https://youtu.be/XgdY_s1LsZc",
+      "img_url": "https://c8.alamy.com/comp/P4APGK/original-film-title-rab-ne-bana-di-jodi-english-title-rab-ne-bana-di-jodi-film-director-aditya-chopra-year-2008-credit-yash-raj-films-album-P4APGK.jpg",
+      "id": 11
     }
   ],
   "users": [
@@ -121,6 +131,32 @@
       "password": "Raj@123",
       "location": "Hyderabad",
       "mobile": 9667545672,
+      "id": 3
+    }
+  ],
+  "playlist": [
+    {
+      "id": 1,
+      "name": "Top 5",
+      "songIDs": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Romantic",
+      "songIDs": [
+        9,
+        11
+      ]
+    },
+    {
+      "name": "Vvv",
+      "songIDs": [],
       "id": 3
     }
   ]

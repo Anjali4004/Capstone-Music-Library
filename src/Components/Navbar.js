@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Nav,
   Navbar,
@@ -11,9 +11,13 @@ import {
 import { useSelector } from "react-redux";
 
 function NavBar(props) {
+  const [input, setInput] = useState("");
   const user = useSelector((state) => state.users);
   const login = localStorage.getItem("email");
-
+  const handleChange = (e) => {
+    props.setInput(e.target.value);
+    setInput(e.target.value);
+  };
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
       <Container>
@@ -29,7 +33,7 @@ function NavBar(props) {
           <Nav className="mr-auto ">
             <Nav.Link href="/songs">Musics</Nav.Link>
             <Nav.Link href="/About">About</Nav.Link>
-            <Nav.Link href="/songs">Playlist</Nav.Link>
+            <Nav.Link href="/playlist">Playlist</Nav.Link>
             {login === null ? (
               <Nav.Link href="/Register">Register</Nav.Link>
             ) : null}
@@ -42,6 +46,8 @@ function NavBar(props) {
                 placeholder="Search"
                 className="mr-2"
                 aria-label="Search"
+                input={input}
+                onChange={handleChange}
               />
               <Button variant="outline-success">Search</Button>
             </Form>

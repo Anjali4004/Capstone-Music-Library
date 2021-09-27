@@ -17,7 +17,8 @@ const AddSong = () => {
       singer: "",
       length: "",
       web_url: "",
-      img_url: "",
+      img_url:
+        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/red-heart-with-headphones-on-blue-background-royalty-free-image-1610663546.?crop=0.668xw:1.00xh;0.332xw,0&resize=640:*",
     },
     validationSchema: Yup.object({
       movie: Yup.string().required("Movie Name is Required"),

@@ -1,0 +1,31 @@
+.cp-playlist {
+    display: flex;
+    border:1px solid #dcded9;
+    box-shadow: 0 3px 10px 0 rgba(80,80,80,0.1);
+    max-width:230px;
+    margin-top:20px;
+    color:#3d4147;
+}
+.fa-plus {
+    margin:10px 10px 0;
+}
+.pl-description{
+    border:1px solid #dcded9;
+    box-shadow: 0 3px 10px 0 rgba(80,80,80,0.1);
+    margin:5px;
+    /* padding:5px; */
+    display: flex;
+    justify-content: space-between;
+}
+.pl-name {
+    margin:5px 5px 0;
+    font-size: 18px;
+    
+}
+.pl-btn {
+    display: flex;
+    float:right;
+}
+.pl-btn > button {
+    margin:5px;
+}

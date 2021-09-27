@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 
 function Login(props) {
   const users = useSelector((state) => state.users);
-
+  let auth = false;
   const history = useHistory();
 
   const formik = useFormik({
@@ -23,13 +23,22 @@ function Login(props) {
         email: values.email,
         password: values.password,
       };
-      localStorage.setItem("email", x.email);
 
       users
         .filter(
           (user) => user.email === x.email && user.password === x.password
         )
-        .map((user) => history.push(`/loggedIn/${user.id}`));
+        .map((user) => {
+          return (
+            <>
+              {(auth = true)}
+              {localStorage.setItem("email", x.email)}
+              {history.push(`/loggedIn/${user.id}`)}
+            </>
+          );
+        });
+      console.log(auth);
+      auth === false && alert("UserName or password is incorrect...");
     },
   });
   return (

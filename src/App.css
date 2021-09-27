@@ -88,10 +88,16 @@ label {
   height:20px;
   width:40px;
 }
+.pl-checked {
+  margin-right:20px;
+  height:20px;
+  width:40px;
+}
 .fa-edit {
   position:absolute;
   bottom: 0;
   left:0;
+  cursor:pointer;
 }
 .fa-music {
   position: absolute;
