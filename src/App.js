@@ -16,9 +16,12 @@ import UpdateSong from "./Components/EditSong";
 import AddSongPlaylist from "./Components/Playlist/AddSongPlaylist";
 import ViewPlaylistSong from "./Components/Playlist/ViewPlaylistSong";
 import { loadUserAsync, loadSongsAsync } from "./reducers/songReducer";
+
+import { loadPlaylistAsync } from "./reducers/playlistReducer";
+import UserProfile from "./Components/UserProfile";
 import "./App.css";
 import "./playlist.css";
-import { loadPlaylistAsync } from "./reducers/playlistReducer";
+import "./Animation.css";
 const SongDetail = lazy(() => import("./Components/SongDetail"));
 const ViewPlaylist = lazy(() => import("./Components/Playlist/viewPlaylist"));
 const Player = lazy(() => import("./Components/Player"));
@@ -71,6 +74,7 @@ export default function App() {
             path="/playlist/:id/addSong"
             render={(props) => <AddSongPlaylist {...props} />}
           />
+
           <Route
             path="/playlist/:id/viewSong"
             render={(props) => <ViewPlaylistSong {...props} />}
@@ -86,7 +90,10 @@ export default function App() {
           {login ? (
             <>
               <Route path="/AddSong" component={AddSong} />
-
+              <Route
+                path="/profile/:id"
+                render={(props) => <UserProfile {...props} />}
+              />
               <Route path="/EditSong/id/:id" component={UpdateSong} />
               <Route
                 path="/song/:id"

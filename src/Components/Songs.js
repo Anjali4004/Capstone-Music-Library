@@ -65,7 +65,6 @@ function Songs(props) {
 
   return (
     <div className="song_container">
-      {console.log(songList)}
       {login ? (
         toggle ? (
           <Button
@@ -73,7 +72,8 @@ function Songs(props) {
             variant="danger"
             onClick={() => {
               setToggle(!toggle);
-              deleteSongByIds();
+              window.confirm("Are you sure you want to Delete ? ") &&
+                deleteSongByIds();
             }}
           >
             Delete
@@ -92,7 +92,7 @@ function Songs(props) {
         )
       ) : null}
       {login ? (
-        <Button className="add_btn" variant="primary" href="/AddSong">
+        <Button className="add_btn" href="/AddSong">
           Add New Song
         </Button>
       ) : null}

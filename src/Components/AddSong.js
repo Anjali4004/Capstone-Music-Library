@@ -4,11 +4,9 @@ import { Prompt } from "react-router";
 import * as Yup from "yup";
 import { addSongAsync } from "../reducers/songReducer";
 import { useDispatch } from "react-redux";
-import "../App.css";
 
 const AddSong = () => {
   const dispatch = useDispatch();
-
   const formik = useFormik({
     initialValues: {
       movie: "",
@@ -40,6 +38,7 @@ const AddSong = () => {
         img_url: values.img_url,
       };
       dispatch(addSongAsync(Song));
+
       actions.resetForm({
         values: {
           movie: "",

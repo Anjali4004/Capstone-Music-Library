@@ -2,40 +2,38 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "../App.css";
 
-function SongDetail(props) {
-  const song = useSelector((state) => state.songs);
+function UserProfile(props) {
+  const user = useSelector((state) => state.users);
 
   const id = Number(props.match.params?.id);
   return (
     <div>
-      {song
+      {user
         .filter((value) => value.id === id)
         .map((data, key) => (
-          <div key={key} className="songdetail">
+          <div key={key} className="profile">
             <h2 style={{ color: "#006600", textAlign: "center" }}>
-              <u>Song Detail</u>
+              <u>Profile</u>
             </h2>
             <h3>
               ID: <span>{data.id}</span>
             </h3>
             <h3>
-              Title: <span>{data.title}</span>
+              Name: <span>{`${data.firstName} ${data.lastName}`}</span>
+            </h3>
+
+            <h3>
+              Email: <span>{data.email}</span>
             </h3>
             <h3>
-              Movie: <span>{data.movie}</span>
+              Contact: <span>{data.mobile}</span>
             </h3>
             <h3>
-              Year: <span>{data.year}</span>
-            </h3>
-            <h3>
-              Length: <span>{data.length}</span>
-            </h3>
-            <h3>
-              Singer Name: <span>{data.singer}</span>
+              Location: <span>{data.location}</span>
             </h3>
           </div>
         ))}
     </div>
   );
 }
-export default SongDetail;
+export default UserProfile;

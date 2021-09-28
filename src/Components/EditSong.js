@@ -14,8 +14,6 @@ const UpdateSong = (props) => {
   const id = Number(props?.match.params.id);
   const songs = useSelector((state) => state.songs);
   songs?.filter((s) => s.id === id).map((val) => (song = val));
-  var songId = song?.id;
-  console.log(songId);
   const formik = useFormik({
     initialValues: {
       movie: song?.movie,

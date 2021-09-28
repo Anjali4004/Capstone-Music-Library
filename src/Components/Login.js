@@ -14,10 +14,7 @@ function Login(props) {
       email: "",
       password: "",
     },
-    validationSchema: Yup.object({
-      email: Yup.string().required("Email is Required"),
-      password: Yup.string().required("Password is Required"),
-    }),
+
     onSubmit: (values) => {
       let x = {
         email: values.email,
@@ -37,38 +34,42 @@ function Login(props) {
             </>
           );
         });
-      console.log(auth);
+
       auth === false && alert("UserName or password is incorrect...");
     },
   });
   return (
     <div className="form">
-      <h3>Login</h3>
+      <h2>
+        <b>Login</b>
+      </h2>
       <form onSubmit={formik.handleSubmit}>
-        <label htmlFor="email">UserName</label>
-        <input id="email" type="email" {...formik.getFieldProps("email")} />
-        {formik.touched.email && formik.errors.email ? (
-          <div className="error">{formik.errors.email}</div>
-        ) : (
+        <div className="wrap-input">
+          <input
+            id="Useremail"
+            type="email"
+            placeholder="Email"
+            {...formik.getFieldProps("email")}
+          />
+          <i className="fa fa-envelope" />
           <br />
-        )}
-
-        <br />
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          {...formik.getFieldProps("password")}
-        />
-        {formik.touched.password && formik.errors.password ? (
-          <div className="error">{formik.errors.password}</div>
-        ) : (
           <br />
-        )}
-
-        <br />
+          <br />
+        </div>
+        <div className="wrap-input">
+          <input
+            id="Userpwd"
+            type="password"
+            placeholder="Password"
+            {...formik.getFieldProps("password")}
+          />
+          <i className="fa fa-lock" />
+          <br />
+          <br />
+          <br />
+        </div>
         <button className="login" type="submit">
-          Login
+          <h3>LOGIN</h3>
         </button>
         <br />
       </form>

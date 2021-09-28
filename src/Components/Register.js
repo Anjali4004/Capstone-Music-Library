@@ -42,7 +42,9 @@ const Register = () => {
   });
   return (
     <div className="form">
-      <h3>Registration</h3>
+      <h2>
+        <b>Registration</b>
+      </h2>
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="email">Email</label>
         <input id="email" type="email" {...formik.getFieldProps("email")} />
@@ -112,8 +114,8 @@ const Register = () => {
         )}
 
         <br />
-        <button className="addButton" type="submit">
-          Submit
+        <button className="register" type="submit">
+          <h4>REGISTER</h4>
         </button>
         <br />
       </form>

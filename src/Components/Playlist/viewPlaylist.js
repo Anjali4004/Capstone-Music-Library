@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Modal, Button } from "react-bootstrap";
-import { loadPlaylistAsync } from "../../reducers/playlistReducer";
+import {
+  deletePlaylistAsync,
+  loadPlaylistAsync,
+} from "../../reducers/playlistReducer";
 import AddPlaylist from "./AddPlaylist";
 import { useHistory } from "react-router-dom";
 
@@ -16,6 +19,10 @@ function ViewPlaylist() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const setModal = (val) => setShow(val);
+  const deletePlaylist = (itemId) => {
+    dispatch(deletePlaylistAsync(itemId));
+    dispatch(loadPlaylistAsync());
+  };
 
   let playlist = useSelector((state) => state.playlist);
   return (
@@ -51,19 +58,19 @@ function ViewPlaylist() {
             <div className="pl-btn">
               <button
                 type="button"
-                className="btn btn-primary"
-                onClick={() => history.push(`/playlist/${pl.id}/addSong`)}
-              >
-                Add
-              </button>
-              <button
-                type="button"
                 className="btn btn-success"
                 onClick={() => history.push(`/playlist/${pl.id}/viewSong`)}
               >
                 View
               </button>
-              <button type="button" className="btn btn-danger">
+              <button
+                type="button"
+                className="btn btn-danger"
+                onClick={() =>
+                  window.confirm("Do you want to delete this Playlist ?") &&
+                  deletePlaylist(pl.id)
+                }
+              >
                 Delete
               </button>
             </div>

@@ -19,9 +19,9 @@ function NavBar(props) {
     setInput(e.target.value);
   };
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" sticky="top">
+    <Navbar collapseOnSelect expand="lg" variant="dark" sticky="top">
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="/" data-toggle="tooltip" title="Go to Home Page">
           <i
             className="fa fa-soundcloud"
             style={{ fontSize: "50px", color: "white" }}
@@ -30,10 +30,11 @@ function NavBar(props) {
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav ">
-          <Nav className="mr-auto ">
+          <Nav className="mr-auto container1 topBotomBordersOut ">
             <Nav.Link href="/songs">Musics</Nav.Link>
             <Nav.Link href="/About">About</Nav.Link>
             <Nav.Link href="/playlist">Playlist</Nav.Link>
+            <Nav.Link href="/playlist">Contact</Nav.Link>
             {login === null ? (
               <Nav.Link href="/Register">Register</Nav.Link>
             ) : null}
@@ -43,13 +44,12 @@ function NavBar(props) {
             <Form className="d-flex">
               <FormControl
                 type="search"
-                placeholder="Search"
+                placeholder="Search Songs, Artist"
                 className="mr-2"
                 aria-label="Search"
                 input={input}
                 onChange={handleChange}
               />
-              <Button variant="outline-success">Search</Button>
             </Form>
             {user
               ?.filter((data) => data.email === login)
@@ -59,7 +59,9 @@ function NavBar(props) {
                   title={val.firstName}
                   id="collasible-nav-dropdown"
                 >
-                  <NavDropdown.Item href="#">Profile</NavDropdown.Item>
+                  <NavDropdown.Item href={`/profile/${val.id}`}>
+                    Profile
+                  </NavDropdown.Item>
                   <NavDropdown.Item
                     href="/"
                     onClick={() => {
