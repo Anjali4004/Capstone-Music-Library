@@ -39,7 +39,7 @@ function Login(props) {
     },
   });
   return (
-    <div className="form">
+    <div className="login-form">
       <h2>
         <b>Login</b>
       </h2>

@@ -54,7 +54,9 @@ const AddSong = () => {
   });
   return (
     <div className="form">
-      <h3>Add Song</h3>
+      <h2>
+        <b>Add Song</b>
+      </h2>
       <form onSubmit={formik.handleSubmit}>
         <Prompt
           when={

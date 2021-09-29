@@ -1,98 +1,114 @@
 {
   "songs": [
     {
-      "id": 1,
-      "movie": " Bareilly ki Barfi",
+      "id": "39d65b51-647d-465b-843a-7493a642566b",
+      "movie": "Mimi",
+      "title": "Param Sundari",
+      "year": "2021",
+      "singer": "Shreya Ghosal, Jubin Nautiyal",
+      "length": "4:30",
+      "web_url": "https://www.youtube.com/watch?v=w4ClQO0FFQg",
+      "img_url": "https://m.media-amazon.com/images/M/MV5BZTkwMDQ4ZmEtNTdhNi00MmMzLTgwNTQtMDI1NDJjZjQ5Zjg5XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_.jpg"
+    },
+    {
+      "movie": "Bareilly ki Barfi",
       "title": "Nazm Nazm",
       "year": "2017",
       "singer": "Parvo Mukherjee",
-      "length": "3:00",
+      "length": "3:15",
       "web_url": "https://www.youtube.com/watch?v=RFx4g4GunYw",
-      "img_url": "https://n1.sdlcdn.com/imgs/h/b/k/Bareilly-Ki-Barfi-Blu-ray-SDL670225016-1-a007f.jpeg"
+      "img_url": "https://n1.sdlcdn.com/imgs/h/b/k/Bareilly-Ki-Barfi-Blu-ray-SDL670225016-1-a007f.jpeg",
+      "id": "fa9586f8-03a1-4678-a581-ac00d47ad265"
     },
     {
-      "id": 2,
       "movie": "Hum Aapke Hain Koun",
       "title": "Hum Aapke Hain Koun",
       "year": "1994",
       "singer": "SP Balasubrahmanyam",
       "length": "4:00",
-      "web_url": "http://www.songnotes.cc/songs/78-the-tallest-man-on-earth-1904",
-      "img_url": "https://i1.wp.com/bestoftheyear.in/wp-content/uploads/2018/01/Hum-Aapke-hain-koun-1.jpg?fit=1200%2C1600&ssl=1"
+      "web_url": "https://www.youtube.com/watch?v=QyJoeduGpJI",
+      "img_url": "https://i1.wp.com/bestoftheyear.in/wp-content/uploads/2018/01/Hum-Aapke-hain-koun-1.jpg?fit=1200%2C1600&ssl=1",
+      "id": "eced0ef4-0593-4c37-9152-f85f7424c45c"
     },
     {
-      "id": 3,
       "movie": "Dilwale Dulhaniya Le Jayenge",
       "title": "Tujhe Dekha to",
       "year": "1995",
       "singer": "Kumar Sanu",
       "length": "7:00",
       "web_url": "https://www.youtube.com/watch?v=cNV5hLSa9H8",
-      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg"
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg",
+      "id": "b176c7a9-cafb-47f8-aa7e-5f9faf5c7734"
     },
     {
-      "id": 4,
       "movie": "1942 A love story",
       "title": "Ek Ladki Ko Dekha",
       "year": "1994",
       "singer": "Darshan Raval",
-      "length": "5",
+      "length": "5:00",
       "web_url": "https://www.youtube.com/watch?v=CZ5a69wwg5k",
-      "img_url": "https://m.media-amazon.com/images/M/MV5BMjcxNTA4NDczNl5BMl5BanBnXkFtZTcwMDI2ODgzMQ@@._V1_.jpg"
+      "img_url": "https://m.media-amazon.com/images/M/MV5BMjcxNTA4NDczNl5BMl5BanBnXkFtZTcwMDI2ODgzMQ@@._V1_.jpg",
+      "id": "ddb285a2-2436-4d31-b233-152de5628900"
     },
     {
-      "id": 5,
-      "title": "Mere Khwabon Mein",
       "movie": "Dilwale Dulhaniya Le Jayenge",
+      "title": "Mere Khwabon Mein",
       "year": "1995",
-      "singer": "Lata Mangeskar",
+      "singer": "Lata Mangeshkar",
+      "length": "4:15",
       "web_url": "https://www.youtube.com/watch?v=Zxgvob1Ew0c",
-      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg"
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg",
+      "id": "99546e8a-9496-47b3-ae0a-a68a5112371a"
     },
     {
-      "id": 6,
-      "title": "O mere Dil Ke Chain",
       "movie": "Mere Jeevan Sathi",
+      "title": "O mere Dil Ke Chain",
       "year": "1972",
       "singer": "Kishore kumar",
+      "length": "6:00",
       "web_url": "https://www.youtube.com/watch?v=5eyflIV8pzMhttps://www.youtube.com/watch?v=Zxgvob1Ew0c",
-      "img_url": "https://images-na.ssl-images-amazon.com/images/I/A1ONzWhnvTL._RI_.jpg"
+      "img_url": "https://images-na.ssl-images-amazon.com/images/I/A1ONzWhnvTL._RI_.jpg",
+      "id": "17511122-51d9-46f4-a684-f43031430f94"
     },
     {
-      "id": 7,
-      "title": "Maula mere Maula",
       "movie": "Anwar",
+      "title": "Maula mere Maula",
       "year": "2007",
-      "singer": "Roopkumar Rathod",
+      "singer": "RoopKumar Rathod",
+      "length": "5:00",
       "web_url": "https://www.youtube.com/watch?v=boRd0WoCemI",
-      "img_url": "https://upload.wikimedia.org/wikipedia/en/7/79/Anwar_2007_film_poster.jpg"
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/7/79/Anwar_2007_film_poster.jpg",
+      "id": "06ff793c-c215-4a42-b555-1809c0a0147c"
     },
     {
-      "id": 8,
-      "title": "Mehandi Laga ke",
       "movie": "Dilwale Dulhaniya Le Jayenge",
+      "title": "Mehandi Laga ke",
       "year": "1995",
       "singer": "Udit Narayan",
+      "length": "4:25",
       "web_url": "https://www.youtube.com/watch?v=-bNwqXvMuB8",
-      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg"
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/8/80/Dilwale_Dulhania_Le_Jayenge_poster.jpg",
+      "id": "1073644f-2a41-460d-922c-21b85eddff92"
     },
     {
-      "id": 9,
-      "title": "Ek Ajnabee Haseena se",
       "movie": "Ajnabee",
-      "singer": "Kishore kumar",
+      "title": "Ek Ajnabee Haseena se",
       "year": "2001",
+      "singer": "Kishore kumar",
+      "length": "4:30",
       "web_url": "https://www.youtube.com/watch?v=Df_iLzhDoWs",
-      "img_url": "https://images-na.ssl-images-amazon.com/images/I/71tEwMyX4kL._RI_.jpg"
+      "img_url": "https://images-na.ssl-images-amazon.com/images/I/71tEwMyX4kL._RI_.jpg",
+      "id": "3276739f-dee3-49ee-ab61-c847c9cee117"
     },
     {
-      "id": 10,
-      "title": "Kuch Na Kaho",
       "movie": "1942 A love story",
-      "singer": "Kumar Sanu",
+      "title": "Kuch Na Kaho",
       "year": "1994",
+      "singer": "Kumar Sanu",
+      "length": "3:58",
       "web_url": "https://www.youtube.com/watch?v=LLcpGkuQ32o",
-      "img_url": "https://m.media-amazon.com/images/M/MV5BMjcxNTA4NDczNl5BMl5BanBnXkFtZTcwMDI2ODgzMQ@@._V1_.jpg"
+      "img_url": "https://m.media-amazon.com/images/M/MV5BMjcxNTA4NDczNl5BMl5BanBnXkFtZTcwMDI2ODgzMQ@@._V1_.jpg",
+      "id": "dd794e21-7f13-479c-9169-023c15e5aa8c"
     },
     {
       "movie": "Rab Ne Bana Di Jodi",
@@ -102,7 +118,27 @@
       "length": "4:15",
       "web_url": "https://youtu.be/XgdY_s1LsZc",
       "img_url": "https://c8.alamy.com/comp/P4APGK/original-film-title-rab-ne-bana-di-jodi-english-title-rab-ne-bana-di-jodi-film-director-aditya-chopra-year-2008-credit-yash-raj-films-album-P4APGK.jpg",
-      "id": 11
+      "id": "552b13fb-bddb-440d-b48e-734a512b7556"
+    },
+    {
+      "movie": "Shershah",
+      "title": "Ranjha",
+      "year": "2021",
+      "singer": "B Praak",
+      "length": "3:20",
+      "web_url": "https://www.youtube.com/watch?v=V7LwfY5U5WI",
+      "img_url": "https://m.media-amazon.com/images/M/MV5BMjk1NzcwMDUtNDU4ZC00MzlhLTkzZjAtM2MxMTRjZGE0ODdhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
+      "id": "b9451b12-6622-4416-b3c2-50416508bb10"
+    },
+    {
+      "movie": "Shershah",
+      "title": "Raatan lambiya",
+      "year": "2021",
+      "singer": "Jubin Nautiyal",
+      "length": "3:40",
+      "web_url": "https://www.youtube.com/watch?v=gvyUuxdRdR4",
+      "img_url": "https://m.media-amazon.com/images/M/MV5BMjk1NzcwMDUtNDU4ZC00MzlhLTkzZjAtM2MxMTRjZGE0ODdhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
+      "id": "fe35d773-8b9c-4acd-a9bf-fc372a793315"
     }
   ],
   "users": [
@@ -137,28 +173,22 @@
   "playlist": [
     {
       "id": 1,
-      "name": "Top 5",
-      "songIDs": [
-        2,
-        3,
-        5,
-        9,
-        1
-      ]
-    },
-    {
-      "id": 2,
       "name": "Romantic",
       "songIDs": [
-        9,
-        11
+        "fa9586f8-03a1-4678-a581-ac00d47ad265",
+        "eced0ef4-0593-4c37-9152-f85f7424c45c",
+        "1073644f-2a41-460d-922c-21b85eddff92",
+        "ddb285a2-2436-4d31-b233-152de5628900",
+        "99546e8a-9496-47b3-ae0a-a68a5112371a"
       ]
     },
     {
       "id": 3,
-      "name": "Anjali",
+      "name": "XYZ",
       "songIDs": [
-        2
+        "fa9586f8-03a1-4678-a581-ac00d47ad265",
+        "eced0ef4-0593-4c37-9152-f85f7424c45c",
+        "b176c7a9-cafb-47f8-aa7e-5f9faf5c7734"
       ]
     }
   ]

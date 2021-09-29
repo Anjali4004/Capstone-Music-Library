@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 function Player(props) {
   const song = useSelector((state) => state.songs);
 
-  const id = Number(props.match.params.id);
+  const id = props.match.params.id;
   return (
     <div>
       {song

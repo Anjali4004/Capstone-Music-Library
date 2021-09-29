@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Dropdown } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { loadSongsAsync, deleteSongAsync } from "../reducers/songReducer";
 import { useHistory } from "react-router-dom";
@@ -15,6 +15,25 @@ function Songs(props) {
   const login = localStorage.getItem("email");
   const history = useHistory();
   const id = Number(props.match?.params.id);
+  const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
+    <a
+      href="#"
+      ref={ref}
+      onClick={(e) => {
+        e.preventDefault();
+        onClick(e);
+      }}
+    >
+      {children}
+
+      <span
+        className="threedots"
+        style={{ color: "black" }}
+        data-toggle="tooltip"
+        title="View Options"
+      />
+    </a>
+  ));
   useEffect(() => {
     props.input === "" ? (
       <>
@@ -107,73 +126,84 @@ function Songs(props) {
                 src={song.img_url}
                 className="song_image"
               />
-              <Card.Link href={`/player/${song.id}`} target="_blank">
+
+              <Card.Link
+                className="webLink"
+                href={`/player/${song.id}`}
+                target="_blank"
+              >
                 <i
-                  className="fa fa-music"
+                  className="fa fa-toggle-right"
                   data-toggle="tooltip"
                   title="View Song"
                 ></i>
               </Card.Link>
-              {login ? (
-                toggle ? (
-                  <div>
-                    <input
-                      className="checked"
-                      type="checkbox"
-                      // checked={checkedState[index]}
-                      onChange={(e) => {
-                        let value = e.target.checked;
-                        setSongState(
-                          stateSong.map((d) => {
-                            if (d.id === song.id) d.select = value;
-                            return d;
-                          })
-                        );
-                      }}
-                    />
-                  </div>
-                ) : (
-                  <Card.Link
-                    href="#"
-                    onClick={() => {
-                      window.confirm("Are you sure you want to Delete ? ") &&
-                        deleteSong(song.id);
+
+              {toggle ? (
+                <div>
+                  <input
+                    className="checked"
+                    type="checkbox"
+                    onChange={(e) => {
+                      let value = e.target.checked;
+                      setSongState(
+                        stateSong.map((d) => {
+                          if (d.id === song.id) d.select = value;
+                          return d;
+                        })
+                      );
                     }}
-                  >
-                    <i
-                      className="fa fa-times-circle"
-                      style={{ color: "red" }}
-                      data-toggle="tooltip"
-                      title="Delete Song"
-                    ></i>
-                  </Card.Link>
-                )
-              ) : null}
-              <Card.Link
-                onClick={() => history.push(`/EditSong/id/${song.id}`)}
-              >
-                <i
-                  className="fa fa-edit"
-                  style={{ color: "blue" }}
-                  data-toggle="tooltip"
-                  title="Edit Song"
-                ></i>
-              </Card.Link>
+                  />
+                </div>
+              ) : (
+                <Dropdown className="dd_song">
+                  <Dropdown.Toggle as={CustomToggle} />
+                  {login ? (
+                    <Dropdown.Menu size="sm" title="">
+                      <Dropdown.Item
+                        onClick={() => history.push(`/EditSong/id/${song.id}`)}
+                      >
+                        Edit
+                      </Dropdown.Item>
+                      <Dropdown.Item
+                        onClick={() => {
+                          window.confirm(
+                            "Are you sure you want to Delete ? "
+                          ) && deleteSong(song.id);
+                        }}
+                      >
+                        Delete
+                      </Dropdown.Item>
+                      <Dropdown.Item onClick={() => history.push(`/playlist`)}>
+                        Add To playlist
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  ) : (
+                    <Dropdown.Menu size="sm" title="">
+                      <Dropdown.Item onClick={() => history.push(`/Playlist`)}>
+                        Add To playlist
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  )}
+                </Dropdown>
+              )}
             </div>
+
             <Card.Body>
               <Card.Title
-                role="button"
-                tabIndex="-1"
+                data-toggle="tooltip"
+                title={song.title}
                 id={`title${song.id} `}
                 className="song-title"
-                style={{ cursor: "pointer", color: "blue" }}
+                style={{ cursor: "pointer" }}
                 onClick={() => {
                   history.push(`/song/${song.id}`);
                 }}
               >
                 <u> {song.title}</u>
               </Card.Title>
-              <Card.Text className="song-title">{song.movie}</Card.Text>
+
+              <Card.Text className="song-movie">{song.movie}</Card.Text>
             </Card.Body>
           </Card>
         ))}

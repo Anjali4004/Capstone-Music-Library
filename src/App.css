@@ -1,14 +1,29 @@
 .songs {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   padding-top:30px;
-  margin:0px 50px;
+ padding-left: 20px;
+ 
+}
+.song-movie {
+  color: #626e6d;
+  font-size: 14px;
+}
+.song-movie, .song-title {
+  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.song-title {
+  font-family: serif;
+  font-weight: bolder;
+  margin-top:5px;
+  margin-bottom: 0px;
 }
 .navbar {
   padding: 0px;
   margin-bottom:20px;
-  background-color:#033b28;
+  background-color:#061f3b;
 }
 .navbar-dark .navbar-nav  .nav-link{
   color: white;
@@ -19,32 +34,82 @@
 }
 .card {
   border:none;
-  height:400px;
-  width:200px;
+  height:200px;
+  width:130px;
   margin:10px;
 }
-
 .card-text .card-title {
   display: flex;
   justify-content: center;
+  
+}
+.card-body {
+  padding:0;
 }
 .song_image {
-  height:200px;
-  width:200px;
-  border-radius: 50%; 
+  height:140px;
+  width:120px;
+  border-radius: 10px; 
+ 
+}
+.song_image:hover {
+  filter: blur(1px);
+  transition: 0.5s ease-in-out;
+}
+
+.song_image:hover + .webLink {
+  display: block;
+  position: absolute;
+  /* font-size: 30px; */
+  top:30%;
+  right: 40%;
+  cursor: pointer;
+  background-color: white;
+  padding: 10px;
+  border-radius: 40%;
+  color: #ed370e;
+ 
+}
+
+.webLink:hover{
+  display: block;
+  position: absolute;
+  /* font-size: 30px; */
+  top:30%;
+  right: 40%;
+  cursor: pointer;
+  background-color: white;
+  padding: 10px;
+  border-radius: 40%;
+  color: red;
+}
+.webLink:hover + .song_image {
+ opacity: 0.3;
+}
+.webLink {
+  display: none;
+  color:white;
+}
+.img_icon_wrap {
+  position: relative;
+}
+.dd_song,
+.threedots::before {
+ content: "\2807";
+  position: absolute;
+  font-size: 30px;
+  top:0;
+  right: -7px;
 }
 .nav-end {
   padding: 0px;
-}
-.song_image:hover {
-  filter: drop-shadow(8px 8px 10px gray);
 }
 
 .header {
   color:#e30bad;
 }
 
-.form {
+.form, .login-form {
   border:1px solid #dcded9;
   box-shadow: 0 3px 10px 0 rgba(80,80,80,0.1);
   margin-top: 20px !important;
@@ -55,7 +120,7 @@
 }
 
 
-.form > h2 {
+.form > h2, .login-form>h2 {
   
   text-align: center;
 }
@@ -127,10 +192,7 @@ input#Userpwd {
 label {
   float:left;
   margin:0px 20px;
-  color:blue;
-}
-.img_icon_wrap {
-  position: relative;
+  font-family: sans-serif;
 }
 .fa {
   font-size: 30px;
@@ -143,8 +205,8 @@ label {
 }
 .checked {
   position:absolute;
-  top:0;
-  right:0;
+  top:-12px;
+  left:-30px;
   height:20px;
   width:40px;
 }
@@ -158,18 +220,6 @@ label {
   bottom: 0;
   left:0;
   cursor:pointer;
-}
-.fa-music {
-  position: absolute;
-  color:black;
-  bottom: 0;
-  right:0;
-}
- 
-.fa-music:before{
-  content:"\f04b";
-  color:black;
-  opacity:0.6;
 }
 .song_container {
   position: relative;
@@ -192,8 +242,15 @@ label {
   align-items: center;
   padding-top:10px;
 }
-.song-title {
-  overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+
+
+.w-100 {
+  height: 400px;
+}
+.aboutArea {
+  text-align: center;
+  margin:20px;
+}
+.aboutArea > p {
+  font-size: 20px;
 }

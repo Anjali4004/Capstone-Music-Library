@@ -34,7 +34,7 @@ function NavBar(props) {
             <Nav.Link href="/songs">Musics</Nav.Link>
             <Nav.Link href="/About">About</Nav.Link>
             <Nav.Link href="/playlist">Playlist</Nav.Link>
-            <Nav.Link href="/playlist">Contact</Nav.Link>
+            {/* <Nav.Link href="/playlist">Contact</Nav.Link> */}
             {login === null ? (
               <Nav.Link href="/Register">Register</Nav.Link>
             ) : null}

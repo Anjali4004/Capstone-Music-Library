@@ -11,7 +11,7 @@ const UpdateSong = (props) => {
   let song;
   const dispatch = useDispatch();
   const history = useHistory();
-  const id = Number(props?.match.params.id);
+  const id = props?.match.params.id;
   const songs = useSelector((state) => state.songs);
   songs?.filter((s) => s.id === id).map((val) => (song = val));
   const formik = useFormik({

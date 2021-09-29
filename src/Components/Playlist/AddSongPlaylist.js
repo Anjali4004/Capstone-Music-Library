@@ -58,7 +58,7 @@ const AddSongPlaylist = (props) => {
   return (
     <div>
       <button
-        className="btn btn-primary"
+        className="btn btn-info"
         type="submit"
         onClick={() => AddSongToPlaylist()}
       >
@@ -103,7 +103,10 @@ const AddSongPlaylist = (props) => {
                 >
                   <u> {u.title}</u>
                 </Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">
+                <Card.Subtitle
+                  style={{ margin: 0 }}
+                  className="mb-2 text-muted"
+                >
                   {u.movie}
                 </Card.Subtitle>
               </div>

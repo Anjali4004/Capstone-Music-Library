@@ -45,6 +45,8 @@ const Register = () => {
       <h2>
         <b>Registration</b>
       </h2>
+      <br />
+
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="email">Email</label>
         <input id="email" type="email" {...formik.getFieldProps("email")} />

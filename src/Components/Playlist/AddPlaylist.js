@@ -36,7 +36,7 @@ const AddPlaylist = (props) => {
         )}
 
         <br />
-        <button className="addButton" type="submit">
+        <button className="btn btn-success addButton" type="submit">
           Add Playlist
         </button>
         <br />

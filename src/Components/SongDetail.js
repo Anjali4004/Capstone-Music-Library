@@ -5,7 +5,7 @@ import "../App.css";
 function SongDetail(props) {
   const song = useSelector((state) => state.songs);
 
-  const id = Number(props.match.params?.id);
+  const id = props.match.params?.id;
   return (
     <div>
       {song
@@ -15,9 +15,7 @@ function SongDetail(props) {
             <h2 style={{ color: "#006600", textAlign: "center" }}>
               <u>Song Detail</u>
             </h2>
-            <h3>
-              ID: <span>{data.id}</span>
-            </h3>
+
             <h3>
               Title: <span>{data.title}</span>
             </h3>
