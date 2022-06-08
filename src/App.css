@@ -6,8 +6,10 @@
  
 }
 .song-movie {
-  color: #626e6d;
-  font-size: 14px;
+  /* color: #626e6d; */
+  color:darkred;
+  font-size: larger;
+  margin-bottom:-7px;
 }
 .song-movie, .song-title {
   overflow: hidden;
@@ -20,6 +22,7 @@
   margin-top:5px;
   margin-bottom: 0px;
 }
+
 .navbar {
   padding: 0px;
   margin-bottom:20px;
@@ -34,7 +37,7 @@
 }
 .card {
   border:none;
-  height:200px;
+  max-height:400px;
   width:130px;
   margin:10px;
 }
@@ -146,7 +149,7 @@ input#Userpwd {
   position: absolute;
  
 }
-.login,.register {
+.login,.register, .addButton {
   border: none;
   border-radius: 40px;
   height: 50px;
@@ -161,22 +164,34 @@ input#Userpwd {
   top:15px;
   left:20px;
 }
-.songdetail, .profile {
-  border:1px solid #dcded9;
+.Details {
+  display: flex;
+}
+.songdetail {
+  padding-top: 40px;
+  padding-left: 30px;
+}
+ .profile {
+  
   box-shadow: 0 3px 10px 0 rgba(80,80,80,0.1);
   margin-top: 20px !important;
   width:400px;
   margin:auto;
   padding:20px;
   max-width:600px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-.songdetail > h3 {
-  color:rgb(17, 133, 98);
-  text-align:center;
+.songdetail > h4 {
+  color:#858371;
+  font-size: 18px;
 }
-.songdetail > h3 >span {
-  color:rgb(48, 17, 133);
-  text-align:center;
+.songdetail > h2 {
+  font-size: 40px;
+}
+.userIcon {
+  font-size:200px;
 }
 .profile > h3 {
   color:rgb(17, 133, 98);
@@ -254,3 +269,4 @@ label {
 .aboutArea > p {
   font-size: 20px;
 }
+input[type="checkbox"] { margin-right: 4px}

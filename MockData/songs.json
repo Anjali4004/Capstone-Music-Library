@@ -21,14 +21,14 @@
       "id": "fa9586f8-03a1-4678-a581-ac00d47ad265"
     },
     {
+      "id": "eced0ef4-0593-4c37-9152-f85f7424c45c",
       "movie": "Hum Aapke Hain Koun",
       "title": "Hum Aapke Hain Koun",
-      "year": "1994",
+      "year": "1995",
       "singer": "SP Balasubrahmanyam",
       "length": "4:00",
       "web_url": "https://www.youtube.com/watch?v=QyJoeduGpJI",
-      "img_url": "https://i1.wp.com/bestoftheyear.in/wp-content/uploads/2018/01/Hum-Aapke-hain-koun-1.jpg?fit=1200%2C1600&ssl=1",
-      "id": "eced0ef4-0593-4c37-9152-f85f7424c45c"
+      "img_url": "https://i1.wp.com/bestoftheyear.in/wp-content/uploads/2018/01/Hum-Aapke-hain-koun-1.jpg?fit=1200%2C1600&ssl=1"
     },
     {
       "movie": "Dilwale Dulhaniya Le Jayenge",
@@ -111,34 +111,14 @@
       "id": "dd794e21-7f13-479c-9169-023c15e5aa8c"
     },
     {
-      "movie": "Rab Ne Bana Di Jodi",
-      "title": "Haule Haule",
-      "year": "2008",
-      "singer": "Udit Narayan",
-      "length": "4:15",
-      "web_url": "https://youtu.be/XgdY_s1LsZc",
-      "img_url": "https://c8.alamy.com/comp/P4APGK/original-film-title-rab-ne-bana-di-jodi-english-title-rab-ne-bana-di-jodi-film-director-aditya-chopra-year-2008-credit-yash-raj-films-album-P4APGK.jpg",
-      "id": "552b13fb-bddb-440d-b48e-734a512b7556"
-    },
-    {
-      "movie": "Shershah",
-      "title": "Ranjha",
-      "year": "2021",
-      "singer": "B Praak",
-      "length": "3:20",
-      "web_url": "https://www.youtube.com/watch?v=V7LwfY5U5WI",
-      "img_url": "https://m.media-amazon.com/images/M/MV5BMjk1NzcwMDUtNDU4ZC00MzlhLTkzZjAtM2MxMTRjZGE0ODdhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
-      "id": "b9451b12-6622-4416-b3c2-50416508bb10"
-    },
-    {
       "movie": "Shershah",
       "title": "Raatan lambiya",
       "year": "2021",
       "singer": "Jubin Nautiyal",
-      "length": "3:40",
+      "length": "4:00",
       "web_url": "https://www.youtube.com/watch?v=gvyUuxdRdR4",
-      "img_url": "https://m.media-amazon.com/images/M/MV5BMjk1NzcwMDUtNDU4ZC00MzlhLTkzZjAtM2MxMTRjZGE0ODdhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
-      "id": "fe35d773-8b9c-4acd-a9bf-fc372a793315"
+      "img_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/red-heart-with-headphones-on-blue-background-royalty-free-image-1610663546.?crop=0.668xw:1.00xh;0.332xw,0&resize=640:*",
+      "id": "926b49d4-0bf0-4ce7-8e4d-19335e855b6e"
     }
   ],
   "users": [
@@ -175,20 +155,62 @@
       "id": 1,
       "name": "Romantic",
       "songIDs": [
-        "fa9586f8-03a1-4678-a581-ac00d47ad265",
         "eced0ef4-0593-4c37-9152-f85f7424c45c",
         "1073644f-2a41-460d-922c-21b85eddff92",
+        "ddb285a2-2436-4d31-b233-152de5628900",
+        "99546e8a-9496-47b3-ae0a-a68a5112371a",
+        "06ff793c-c215-4a42-b555-1809c0a0147c",
+        "3276739f-dee3-49ee-ab61-c847c9cee117",
+        "dd794e21-7f13-479c-9169-023c15e5aa8c"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Dhaakad",
+      "songIDs": [
+        "fa9586f8-03a1-4678-a581-ac00d47ad265",
+        "eced0ef4-0593-4c37-9152-f85f7424c45c",
+        "b176c7a9-cafb-47f8-aa7e-5f9faf5c7734",
         "ddb285a2-2436-4d31-b233-152de5628900",
         "99546e8a-9496-47b3-ae0a-a68a5112371a"
       ]
     },
     {
-      "id": 3,
-      "name": "XYZ",
+      "id": 5,
+      "name": "New Song",
       "songIDs": [
+        "39d65b51-647d-465b-843a-7493a642566b",
+        "99546e8a-9496-47b3-ae0a-a68a5112371a",
+        "17511122-51d9-46f4-a684-f43031430f94",
+        "06ff793c-c215-4a42-b555-1809c0a0147c"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Old ",
+      "songIDs": [
+        "b176c7a9-cafb-47f8-aa7e-5f9faf5c7734",
+        "ddb285a2-2436-4d31-b233-152de5628900"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Fav",
+      "songIDs": [
+        "39d65b51-647d-465b-843a-7493a642566b",
         "fa9586f8-03a1-4678-a581-ac00d47ad265",
+        "eced0ef4-0593-4c37-9152-f85f7424c45c"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Mine",
+      "songIDs": [
         "eced0ef4-0593-4c37-9152-f85f7424c45c",
-        "b176c7a9-cafb-47f8-aa7e-5f9faf5c7734"
+        "b176c7a9-cafb-47f8-aa7e-5f9faf5c7734",
+        "99546e8a-9496-47b3-ae0a-a68a5112371a",
+        "dd794e21-7f13-479c-9169-023c15e5aa8c",
+        "926b49d4-0bf0-4ce7-8e4d-19335e855b6e"
       ]
     }
   ]

@@ -9,7 +9,6 @@ function About() {
   const history = useHistory();
   return (
     <div style={{ margin: "20px" }}>
-      {console.log(uuidv4())}
       <div
         id="carouselExampleIndicators"
         class="carousel slide"

@@ -6,6 +6,15 @@ import { addSongAsync } from "../reducers/songReducer";
 import { useDispatch } from "react-redux";
 
 const AddSong = () => {
+  window.onbeforeunload = (event) => {
+    const e = event || window.event;
+    // Cancel the event
+    e.preventDefault();
+    if (e) {
+      e.returnValue = ""; // Legacy method for cross browser support
+    }
+    return ""; // Legacy method for cross browser support
+  };
   const dispatch = useDispatch();
   const formik = useFormik({
     initialValues: {
@@ -15,8 +24,7 @@ const AddSong = () => {
       singer: "",
       length: "",
       web_url: "",
-      img_url:
-        "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/red-heart-with-headphones-on-blue-background-royalty-free-image-1610663546.?crop=0.668xw:1.00xh;0.332xw,0&resize=640:*",
+      img_url: "",
     },
     validationSchema: Yup.object({
       movie: Yup.string().required("Movie Name is Required"),
@@ -58,15 +66,6 @@ const AddSong = () => {
         <b>Add Song</b>
       </h2>
       <form onSubmit={formik.handleSubmit}>
-        <Prompt
-          when={
-            formik.values.movie !== "" ||
-            formik.values.title !== "" ||
-            formik.values.length !== "" ||
-            formik.values.singer !== ""
-          }
-          message="Are you sure to exit without saving?"
-        />
         <label htmlFor="movie">Movie</label>
         <input id="movie" type="text" {...formik.getFieldProps("movie")} />
         {formik.touched.movie && formik.errors.movie ? (

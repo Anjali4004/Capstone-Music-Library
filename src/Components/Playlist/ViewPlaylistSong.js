@@ -111,10 +111,10 @@ const ViewPlaylistSong = (props) => {
                     </Card.Subtitle>
                   </div>
                   <div style={{ width: "20%" }}>
-                    <Card.Link href={`${u.web_url}`} target="_blank">
+                    <Card.Link href={`/player/${u.id}`} target="_blank">
                       <i
-                        className="fa fa-toggle-right"
-                        style={{ color: "#085427" }}
+                        className="fa fa-youtube-play"
+                        style={{ color: "red" }}
                       />
                     </Card.Link>
 

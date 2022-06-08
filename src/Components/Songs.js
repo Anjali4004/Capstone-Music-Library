@@ -3,6 +3,7 @@ import { Card, Button, Dropdown } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { loadSongsAsync, deleteSongAsync } from "../reducers/songReducer";
 import { useHistory } from "react-router-dom";
+import FilterComponent from "./FilterComponent";
 
 function Songs(props) {
   let filtered;
@@ -11,6 +12,9 @@ function Songs(props) {
   const [songList, setSongList] = useState([]);
   const songs = useSelector((state) => state.songs);
   const [stateSong, setSongState] = useState([]);
+  const [showYear, setYear] = useState(false);
+  const [showSinger, setSinger] = useState(false);
+  const [showLength, setLength] = useState(false);
   const dispatch = useDispatch();
   const login = localStorage.getItem("email");
   const history = useHistory();
@@ -115,7 +119,14 @@ function Songs(props) {
           Add New Song
         </Button>
       ) : null}
-
+      <FilterComponent
+        login={login}
+        parentSinger={(s, y, l) => {
+          setSinger(s);
+          setYear(y);
+          setLength(l);
+        }}
+      />
       <div className="songs">
         {id ? props?.handleCallBack(id) : null}
         {songList?.map((song, index) => (
@@ -133,7 +144,7 @@ function Songs(props) {
                 target="_blank"
               >
                 <i
-                  className="fa fa-toggle-right"
+                  className="fa fa-youtube-play"
                   data-toggle="tooltip"
                   title="View Song"
                 ></i>
@@ -203,7 +214,30 @@ function Songs(props) {
                 <u> {song.title}</u>
               </Card.Title>
 
-              <Card.Text className="song-movie">{song.movie}</Card.Text>
+              <Card.Text
+                data-toggle="tooltip"
+                title={song.movie}
+                className="song-movie"
+              >
+                {song.movie}
+              </Card.Text>
+              {showSinger && (
+                <Card.Text
+                  data-toggle="tooltip"
+                  title={song.singer}
+                  className="song-movie"
+                >
+                  {song.singer}
+                </Card.Text>
+              )}
+              {showYear && (
+                <Card.Text className="song-movie">Year: {song.year}</Card.Text>
+              )}
+              {showLength && (
+                <Card.Text className="song-movie">
+                  Length: {song.length}
+                </Card.Text>
+              )}
             </Card.Body>
           </Card>
         ))}

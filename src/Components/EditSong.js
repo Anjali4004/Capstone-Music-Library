@@ -51,7 +51,9 @@ const UpdateSong = (props) => {
   });
   return (
     <div className="form">
-      <h3>Add Song</h3>
+      <h2>
+        <b>Update Song</b>
+      </h2>
       <form onSubmit={formik.handleSubmit}>
         <label htmlFor="movie">Movie</label>
         <input id="movie" type="text" {...formik.getFieldProps("movie")} />
@@ -116,7 +118,7 @@ const UpdateSong = (props) => {
 
         <br />
         <button className="addButton" type="submit">
-          Update
+          <h4>Update</h4>
         </button>
         <br />
       </form>

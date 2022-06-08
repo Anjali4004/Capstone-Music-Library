@@ -5,12 +5,13 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, connect } from "react-redux";
 import NavBar from "./Components/Navbar";
 import About from "./Components/About";
 import Songs from "./Components/Songs";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
+import Charts from "./Components/Charts";
 import AddSong from "./Components/AddSong";
 import UpdateSong from "./Components/EditSong";
 import AddSongPlaylist from "./Components/Playlist/AddSongPlaylist";
@@ -26,10 +27,9 @@ const SongDetail = lazy(() => import("./Components/SongDetail"));
 const ViewPlaylist = lazy(() => import("./Components/Playlist/viewPlaylist"));
 const Player = lazy(() => import("./Components/Player"));
 
-export default function App() {
+function App(props) {
   const [user, setUser] = useState(null);
   const [inp, setInp] = useState("");
-  const dispatch = useDispatch();
   const login = localStorage.getItem("email");
   function setId(id) {
     setUser(id);
@@ -38,10 +38,10 @@ export default function App() {
     setInp(input);
   }
   useEffect(() => {
-    dispatch(loadUserAsync());
-    dispatch(loadSongsAsync());
-    dispatch(loadPlaylistAsync());
-  }, [dispatch]);
+    props.loadUserAsync();
+    props.loadSongsAsync();
+    props.loadPlaylistAsync();
+  }, []);
 
   return (
     <Router>
@@ -50,7 +50,7 @@ export default function App() {
 
         <Switch>
           <Route exact path="/" render={() => <Songs input={inp} />} />
-          <Route path="/songs" render={() => <Songs input={inp} />} />
+          <Route exact path="/songs" render={() => <Songs input={inp} />} />
           <Route
             path="/loggedIn/:id"
             render={(props) => (
@@ -67,9 +67,9 @@ export default function App() {
           />
 
           <Route path="/About" component={About} />
-          <Route path="/About" component={About} />
           <Route path="/Login" component={Login} />
           <Route path="/Register" component={Register} />
+          <Route path="/Charts" component={Charts} />
           <Route
             path="/playlist/:id/addSong"
             render={(props) => <AddSongPlaylist {...props} />}
@@ -112,3 +112,9 @@ export default function App() {
     </Router>
   );
 }
+const mapDispatchToProps = (dispatch) => ({
+  loadUserAsync: () => dispatch(loadUserAsync()),
+  loadSongsAsync: () => dispatch(loadSongsAsync()),
+  loadPlaylistAsync: () => dispatch(loadPlaylistAsync()),
+});
+export default connect(null, mapDispatchToProps)(App);
